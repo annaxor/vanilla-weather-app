@@ -1,8 +1,8 @@
 function formatdate(timestamp) {
     let date = new Date (timestamp);
-    let hour = date.getHours();
-    if (hour < 10) {
-        hour = `0${hour}`;
+    let hours = date.getHours();
+    if (hours < 10) {
+        hours = `0${hours}`;
     }
     
     let minutes = date.getMinutes();
@@ -13,7 +13,7 @@ function formatdate(timestamp) {
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     let day = days[date.getDay()];
 
-     return `${day} ${hour}:${minutes}`
+     return `${day} ${hours}:${minutes}`
 }
 
 function displayTemperature(response) {
